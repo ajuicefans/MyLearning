@@ -35,7 +35,7 @@ CSS：表现（美化网页）
 
 > F12 开发人员工具
 
-![baidu.com](F:/lifeProject/Mylearning/css3_kuangshenJava/images/baidu.png)
+![baidu.com](https://raw.githubusercontent.com/ajuicefans/mylearning/main/css3_kuangshenJava/images/baidu.png)
 
 
 
@@ -48,3 +48,7 @@ CSS2.0：DIV（块）+ CSS，HTML与CSS结构分离，网页变的简单，SEO(�
 CSS2.1：浮动，定位
 
 CSS3.0：圆角边框，阴影，动画...	浏览器兼容性~
+
+
+
+## 1.3 CSS快速入门
