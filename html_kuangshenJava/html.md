@@ -10,7 +10,7 @@
 
 ---
 
-<img src="F:\lifeProject\Mylearning\html_kuangshenJava\images\1.png" alt="1" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/1.png" alt="1" style="zoom:50%;" />
 
 ---
 
@@ -24,7 +24,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
 > 网页右击👉审查元素；
 >
-> Chrome👉检查<img src="F:\lifeProject\Mylearning\html_kuangshenJava\images\2.png" alt="2" style="zoom:50%;" />
+> Chrome👉检查<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/2.png" alt="2" style="zoom:50%;" />
 
 ---
 
@@ -32,7 +32,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
 ## HTML发展史
 
-<img src="F:\lifeProject\Mylearning\html_kuangshenJava\images\3.png" alt="3" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/3.png" alt="3" style="zoom:50%;" />
 
 ---
 
@@ -72,7 +72,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 - IDEA
 - WebStorm
 
-<img src="F:\lifeProject\Mylearning\html_kuangshenJava\images\4.png" alt="4" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/4.png" alt="4" style="zoom:50%;" />
 
 ---
 
@@ -80,7 +80,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
 ## HTML 基本结构
 
-<img src="F:\lifeProject\Mylearning\html_kuangshenJava\images\5.png" alt="5" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/5.png" alt="5" style="zoom:50%;" />
 
 > 单个的叫 **自闭合标签**（即只用写一个）
 
@@ -125,7 +125,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
  `<meta>` 标签（单标签）：描述性标签，用来描述网站的一些信息（例如：`<meta charset="UTF-8">`）；一般用来做SEO（搜索引擎优化）
 
-<img src="F:\lifeProject\Mylearning\html_kuangshenJava\images\6.png" alt="6" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/6.png" alt="6" style="zoom:50%;" />
 
 ---
 
@@ -164,7 +164,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 <br/>
 ```
 
-<img src="F:\lifeProject\Mylearning\html_kuangshenJava\images\7.png" alt="7" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/7.png" alt="7" style="zoom:67%;" />
 
 > 换行的**间距** 比 段落标签 小
 
@@ -225,7 +225,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
 常见的图像格式：JPG、GIF、PNG、BMP.......
 
-<img src="F:/lifeProject/Mylearning/html_kuangshenJava/images/8.png" alt="8" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/8.png" alt="8" style="zoom:67%;" />
 
 ```html
 <!-- img 标签学习
@@ -244,7 +244,7 @@ alt：图片名字（必填）
 
 # 5.链接标签
 
-<img src="F:/lifeProject/Mylearning/html_kuangshenJava/images/9.png" alt="9" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/9.png" alt="9" style="zoom:67%;" />
 
 ```html
 <!--
