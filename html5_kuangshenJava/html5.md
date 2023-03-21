@@ -14,7 +14,7 @@
 
 ---
 
-<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/1.png" alt="1" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/1.png" alt="1" style="zoom:50%;" />
 
 ---
 
@@ -28,7 +28,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
 > 网页右击👉审查元素；
 >
-> Chrome👉检查<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/2.png" alt="2" style="zoom:50%;" />
+> Chrome👉检查<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/2.png" alt="2" style="zoom:50%;" />
 
 ---
 
@@ -36,7 +36,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
 ## HTML发展史
 
-<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/3.png" alt="3" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/3.png" alt="3" style="zoom:50%;" />
 
 ---
 
@@ -76,7 +76,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 - IDEA
 - WebStorm
 
-<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/4.png" alt="4" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/4.png" alt="4" style="zoom:50%;" />
 
 ---
 
@@ -84,7 +84,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
 ## HTML 基本结构
 
-<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/5.png" alt="5" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/5.png" alt="5" style="zoom:50%;" />
 
 > 单个的叫 **自闭合标签**（即只用写一个）
 
@@ -129,7 +129,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
  `<meta>` 标签（单标签）：描述性标签，用来描述网站的一些信息（例如：`<meta charset="UTF-8">`）；一般用来做SEO（搜索引擎优化）
 
-<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/6.png" alt="6" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/6.png" alt="6" style="zoom:50%;" />
 
 ---
 
@@ -168,7 +168,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 <br/>
 ```
 
-<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/7.png" alt="7" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/7.png" alt="7" style="zoom:67%;" />
 
 > 换行的**间距** 比 段落标签 小
 
@@ -229,7 +229,7 @@ Hyper Text Markup Language（超文本==**标记语言**==）
 
 常见的图像格式：JPG、GIF、PNG、BMP.......
 
-<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/8.png" alt="8" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/8.png" alt="8" style="zoom:67%;" />
 
 ```html
 <!-- img 标签学习
@@ -248,7 +248,7 @@ alt：图片名字（必填）
 
 # 5.链接标签
 
-<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html_kuangshenJava/images/9.png" alt="9" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/9.png" alt="9" style="zoom:67%;" />
 
 ```html
 <!--
@@ -306,10 +306,10 @@ alt：图片名字（必填）
 # 6.行内元素和块元素
 
 - 块元素 / 块标签
-  - 无论内容多少，该元素独占一行
+  - 无论内容多少，**该元素独占一行**
   - p、h1-h6....
 - 行内元素 / 行内标签
-  - 内容撑开宽度，左右都是行内元素的可以排在一行
+  - 内容撑开宽度，左右都是行内元素的**可以排在一行**
   - a、strong、em...
 
 ---
@@ -321,6 +321,345 @@ alt：图片名字（必填）
 - 什么是列表
   - 列表就是信息资源的一种展示形式。它可以使信息结构化和条理化，并以列表的样式显示出来，以便浏览者能更快捷地获得相应的信息
 - 列表的分类
-  - 无序列表
-  - 有序列表
-  - 定义列表
+  - 无序列表：`<ul>、<li>`
+  - 有序列表：`<ol>、<li>`
+  - 定义列表：`<dl>、<dt>、<dd>`
+
+```html
+<!--有序列表
+    应用范围：试卷、问答....
+-->
+<ol>
+    <li>money</li>
+    <li>sex</li>
+    <li>life</li>
+    <li>songs</li>
+    <li>art</li>
+    <li>crazy</li>
+</ol>
+
+<hr/>
+
+<!--无序列表
+    应用范围：导航栏、侧边栏....
+-->
+<ul>
+    <li>money</li>
+    <li>sex</li>
+    <li>life</li>
+    <li>songs</li>
+    <li>art</li>
+    <li>crazy</li>
+</ul>
+<hr/>
+
+<!--自定义列表
+    dl:标签
+    dt:列表名称
+    dd:列表内容
+    -->
+<dl>
+    <dt>编程语言</dt>
+    <dd>Java</dd>
+    <dd>Python</dd>
+    <dd>Linux</dd>
+    <dd>C</dd>
+
+    <dt>position</dt>
+    <dd>Beijing</dd>
+    <dd>YunCheng</dd>
+    <dd>Chengdu</dd>
+    <dd>Shenzhen</dd>
+</dl>
+```
+
+
+
+---
+
+
+
+# 8.表格标签
+
+- 为什么使用表格
+  - 简单通用：`<table>`
+  - 结构稳定
+- 基本结构
+  - 单元格：`border（边框）`
+  - 行、列 ：`<tr>、<td>`
+  - 跨行、跨列：`colspan、rowspan`
+
+```html
+<!--表格 table
+  行 tr
+  列 td
+  border 边框
+
+  三行四列
+-->
+<table border="1px">
+  <tr>
+<!--    colspan 跨列-->
+    <td colspan="4">1-1</td>
+<!--    <td>1-2</td>-->
+<!--    <td>1-3</td>-->
+<!--    <td>1-4</td>-->
+  </tr>
+
+  <tr>
+<!--    rowspans 跨行-->
+    <td rowspan="2">2-1</td>
+    <td>2-2</td>
+    <td>2-3</td>
+    <td>2-4</td>
+  </tr>
+
+  <tr>
+    <td>3-1</td>
+    <td>3-2</td>
+    <td>3-3</td>
+<!--    <td>3-4</td>-->
+  </tr>
+</table>
+
+<hr/>
+
+<table border="1px">
+  <tr>
+    <td colspan="3">学生成绩</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">哈哈</td>
+    <td>语文</td>
+    <td>数学</td>
+  </tr>
+
+  <tr>
+    <td>100</td>
+    <td>100</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">哈哈嗨</td>
+    <td>语文</td>
+    <td>数学</td>
+  </tr>
+
+  <tr>
+    <td>100</td>
+    <td>100</td>
+  </tr>
+</table>
+```
+
+
+
+---
+
+
+
+# 9.媒体元素：视频和音频
+
+- 视频元素
+  - video
+- 音频元素
+  - audio
+
+```html
+<!--音频和视频-->
+<!--视频 video
+    src：资源路径
+    controls：控制条
+    autoplay：自动播放
+-->
+<video src="../resources/video/redi.mp4" controls autoplay width="300"></video>
+
+<!--音频 audio
+    src：资源路径
+    controls：控制条
+    autoplay：自动播放
+-->
+<audio src="../resources/audio/pass.mp3" controls autoplay></audio>
+```
+
+
+
+----
+
+
+
+# 10.页面结构分析
+
+<img src="F:/lifeProject/Mylearning/html5_kuangshenJava/images/10.png" alt="10" style="zoom:50%;" />
+
+```html
+<header>  <h2>网页头部</h2>  </header>
+
+<section> <h2>网页主体</h2></section>
+
+<footer>  <h2>网页脚部</h2></footer>
+```
+
+> 使用者👉观察者👉开发者
+
+---
+
+
+
+# 11.iframe内联框架
+
+`<iframe>`
+
+<img src="F:/lifeProject/Mylearning/html5_kuangshenJava/images/11.jpg" alt="11" style="zoom: 50%;" />
+
+
+
+```html
+<!--iframe内联框架
+    src：地址（必填）
+    width
+    height
+    name
+-->
+<iframe src="https://www.hao123.com" name="hello" frameborder="0" width="1000px" height="800px"></iframe>
+<a href="https://www.4399.com" target="hello">点击跳转</a>
+
+<!--bilibili网页嵌入-->
+<iframe src="//player.bilibili.com/player.html?aid=675814305&bvid=BV1eU4y1c7g4&cid=427993348&page=1"
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+</iframe>
+```
+
+---
+
+
+
+# 12.初识表单post和get提交（重点）
+
+### 表单语法
+
+>  `<form>`
+
+![12](F:/lifeProject/Mylearning/html5_kuangshenJava/images/12.png)
+
+---
+
+
+
+### 表单元素格式
+
+![13](F:/lifeProject/Mylearning/html5_kuangshenJava/images/13.png)
+
+> name值必填
+
+
+
+### 文本框和单选框
+
+文本框：（文本框、密码框）
+
+```html
+<!--    文本输入框 input type="text"
+        name值必填
+        value="ajuicefans"  默认初始值
+        maxlength="8"       最长能写几个字符
+        size="30"           文本框长度
+-->
+	<p>名字：<input type="text" name="username" value="ajuicefans" maxlength="8" size="30"></p>
+
+<!--    密码框 input type="password"-->
+    <p>密码：<input type="password" name="pwd"></p>
+```
+
+单选框：
+
+```html
+<p>性别：
+<!--    单选框标签
+        input type="radio"
+        value：单选框的值
+        name：表示 组  单选框就只能选一个了
+		默认选项：checked
+-->
+        <input type="radio" value="boy" name="sex"/>男
+        <input type="radio" value="girl" name="sex"/>女
+    </p>
+```
+
+---
+
+
+
+### 按钮和多选框
+
+多选框
+
+```html
+<!--    多选框标签
+        input type="checkbox"
+		默认选项：checked
+		
+        name一样时是组，服务器会把其想象成数组
+        -->
+    <p>爱好：
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="code" name="hobby">敲代码
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="music" name="hobby" checked>听音乐
+    </p>
+```
+
+按钮
+
+```html
+<!--    按钮
+        input type="button"     普通按钮
+        input type="image"      图像按钮
+        input type="submit"     提交按钮
+        input type="reset"      重置按钮
+
+		value可以改变按钮中的值<!--value可以给表单按钮赋值-->
+-->
+    <p>按钮：
+        <input type="button" name="btn1" value="点击变长"> <!--效果可以通过js做-->
+        <!--图片按钮-->
+        <input type="image" src="../resources/images/666.jpg">
+    </p>
+
+    <p>
+        <input type="submit">
+        <input type="reset" value="清空表单"> <!--value可以给表单按钮赋值-->
+    </p>
+```
+
+---
+
+### 列表框文本域和文件域
+
+
+
+
+
+---
+
+### 搜索框滑块和简单验证
+
+
+
+
+
+---
+
+### 表单的应用
+
+
+
+---
+
+
+
+# HTML总结
+
+
+
