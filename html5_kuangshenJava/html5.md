@@ -491,7 +491,7 @@ alt：图片名字（必填）
 
 # 10.页面结构分析
 
-<img src="F:/lifeProject/Mylearning/html5_kuangshenJava/images/10.png" alt="10" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/10.png" alt="10" style="zoom:50%;" />
 
 ```html
 <header>  <h2>网页头部</h2>  </header>
@@ -507,11 +507,11 @@ alt：图片名字（必填）
 
 
 
-# 11.iframe内联框架
+# 11.iframe内联框架（内嵌网页）
 
 `<iframe>`
 
-<img src="F:/lifeProject/Mylearning/html5_kuangshenJava/images/11.jpg" alt="11" style="zoom: 50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/11.jpg" alt="11" style="zoom: 50%;" />
 
 
 
@@ -535,13 +535,23 @@ alt：图片名字（必填）
 
 
 
-# 12.初识表单post和get提交（重点）
+# 12-18.初识表单
 
-### 表单语法
+### 表单语法：表单post和get提交（重点）
 
 >  `<form>`
 
-![12](F:/lifeProject/Mylearning/html5_kuangshenJava/images/12.png)
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/12.png" alt="12" style="zoom:50%;" />
+
+```html
+<!--表单 form
+    action：表单提交的位置，可以是网站，也可以是一个请求处理地址
+    method：post和get 提交方式
+	    get方式提交：我们可以在url中看到我们提交的信息，不安全，但高效
+    	post方式：比较安全，传输大文件  如果不加密 也可以在network中看到
+-->
+<form action="1.我的第一个网页.html" method="get"></form>
+```
 
 ---
 
@@ -549,7 +559,7 @@ alt：图片名字（必填）
 
 ### 表单元素格式
 
-![13](F:/lifeProject/Mylearning/html5_kuangshenJava/images/13.png)
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/html5_kuangshenJava/images/13.png" alt="13" style="zoom:50%;" />
 
 > name值必填
 
@@ -575,13 +585,13 @@ alt：图片名字（必填）
 单选框：
 
 ```html
-<p>性别：
 <!--    单选框标签
         input type="radio"
         value：单选框的值
         name：表示 组  单选框就只能选一个了
 		默认选项：checked
 -->
+	<p>性别：
         <input type="radio" value="boy" name="sex"/>男
         <input type="radio" value="girl" name="sex"/>女
     </p>
@@ -591,7 +601,7 @@ alt：图片名字（必填）
 
 
 
-### 按钮和多选框
+### 按钮和多选框和下拉框
 
 多选框
 
@@ -601,7 +611,7 @@ alt：图片名字（必填）
 		默认选项：checked
 		
         name一样时是组，服务器会把其想象成数组
-        -->
+-->
     <p>爱好：
         <input type="checkbox" value="sleep" name="hobby">睡觉
         <input type="checkbox" value="code" name="hobby">敲代码
@@ -619,7 +629,7 @@ alt：图片名字（必填）
         input type="submit"     提交按钮
         input type="reset"      重置按钮
 
-		value可以改变按钮中的值<!--value可以给表单按钮赋值-->
+		value可以改变按钮中的值,即value可以给表单按钮赋值
 -->
     <p>按钮：
         <input type="button" name="btn1" value="点击变长"> <!--效果可以通过js做-->
@@ -633,11 +643,50 @@ alt：图片名字（必填）
     </p>
 ```
 
+下拉框
+
+```html
+<!--    下拉框，列表框
+		默认选中的：selected
+-->
+    <p>国家：
+<!--        id=""后面的学习选择区用的，这里可以不用-->
+        <select name="列表名称" >
+            <option value="China">中国</option>
+            <option value="US">US</option>
+            <option value="UK" selected>UK</option>
+            <option value="India">India</option>
+        </select>
+    </p>
+```
+
 ---
 
 ### 列表框文本域和文件域
 
+文本域
 
+```html
+<!--    文本域 textarea
+        cols="50" rows="10"
+-->
+    <p>反馈：
+        <textarea name="textarea" cols="50" rows="10">文本内容</textarea>
+    </p>
+```
+
+文件域
+
+```html
+<!--    文件域
+        input type="file"
+        name="files"
+-->
+    <p>
+        <input type="file" name="filesss">
+        <input type="button" value="上传文件" name="upload">
+    </p>
+```
 
 
 
@@ -645,21 +694,145 @@ alt：图片名字（必填）
 
 ### 搜索框滑块和简单验证
 
+简单验证
 
+```html
+<!--    邮件验证-->
+    <p>邮箱：
+        <input type="email" name="email">
+    </p>
+<!--    URL-->
+    <p>邮箱：
+        <input type="url" name="url">
+    </p>
+<!--    数字验证-->
+    <p>商品数量：
+        <input type="number" name="num" max="100" min="0" step="1">
+    </p>
+```
 
+滑块
 
+```html
+<!--    滑块-->
+    <p>音量：
+        <input type="range" name="voice" min="0" max="100" step="1">
+    </p>
+```
+
+搜索框
+
+```html
+<!--    搜索框-->
+    <p>搜索：
+        <input type="search" name="search">
+    </p>
+```
 
 ---
 
 ### 表单的应用
 
+- 隐藏域：`hidden`
+- 只读：`readonly`
+- 禁用：`disabled`
 
+- 增强鼠标可用性：`label`
+
+  ```html
+  <!--增强鼠标可用性
+  	label
+  	可以指向一个位置
+  	for="mark" 指向一个id
+  -->
+      <p>
+          <label for="mark">你点我试试</label>
+          <input type="text" id="mark">
+      </p>
+  ```
+
+
+
+### 表单的初级验证（高级需要用JS自己写）
+
+- 思考：为什么要进行表单验证？
+  - 减轻服务器压力
+  - 保证数据安全性
+
+- 常用方式：
+
+  - placeholder（提示信息，用在输入框控件）
+
+  ```html
+  <p>名字：<input type="text" name="username" value="ajuicefans" placeholder="请输入用户名"></p>
+  ```
+
+  - required**(被需要的)**（非空判断）
+
+  ```html
+  <p>名字：<input type="text" name="username" value="ajuicefans" required></p>
+  ```
+
+  - pattern（正则表达式👉可以直接百度搜索“常用正则表达式”）
+
+  ```html
+  <p>自定义邮箱：
+          <input type="text" name="diyemail" pattern="^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(.[a-zA-Z0-9_-]+)+$">
+  </p>
+  ```
 
 ---
 
 
 
-# HTML总结
+# 19.HTML总结
 
+- HTML的基本结构
+- 网页的基本标签
+  - 标题标签
+  - 段落标签
+  - 换行标签
+  - 水平线标签
+  - 注释
+  - 特殊符号
+- 图像标签
+  - img
+- 超链接
+  - 锚链接
+  - 功能性链接（邮箱、QQ）
+- 行内元素和块元素
+- 列表
+  - 有序
+  - 无序
+  - 自定义
 
+- 表格
+  - 行、列
+  - 跨行、跨列
+- 媒体元素
+  - 音频
+  - 视频
+- 网页的简单布局
+  - 头部
+  - 主体
+  - 脚部
 
+- 内联框架：iframe
+- 表单
+  - form 【get / post】
+  - 文本框
+  - 密码框
+  - 单选框
+  - 多选框
+  - 按钮
+  - 下拉框
+  - 滑块
+  - ...
+- 表单应用
+  - 隐藏域
+  - 只读
+  - 禁用
+- 表单的初级验证
+  - 用户提示 placeholder
+  - 非空判断 required
+  - 正则表达式 pattern
