@@ -51,4 +51,56 @@ CSS3.0：圆角边框，阴影，动画...	浏览器兼容性~
 
 
 
+---
+
+**练习格式：**
+
+![image-20230322232309539](F:/lifeProject/Mylearning/css3_kuangshenJava/images/1.png)
+
+----
+
+
+
 ## 1.3 CSS快速入门
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1.我的第一个css程序</title>
+<!--    规范,<style> 可以编写css的代码 每一个声明最好使用分号 ; 结尾
+        语法：
+            选择器{
+                声明1;
+                声明2;
+                声明3;
+            }
+-->
+    <style>
+        h1{
+            color:red;
+        }
+    </style>
+
+</head>
+<body>
+<h1>我是标题</h1>
+
+</body>
+</html>
+```
+
+建议使用这种规范
+
+![image-20230323000734360](F:/lifeProject/Mylearning/css3_kuangshenJava/images/2.png)
+
+
+
+css的优势：
+
+1. 内容和表现分离
+2. 网页结构表现统一，可以实现复用
+3. 样式十分丰富
+4. 建议使用独立于html的css文件
+5. 利用SEO，容易被搜索引擎收录！（vue不容易被收录）
