@@ -180,10 +180,185 @@ css的优势：
 
 作用：选择页面上的某一个或某一类元素
 
+整个调试都可以在浏览器上完成，完成后把代码copy过去就好了
+
 
 
 ## 2.1 基本选择器
 
-1. 标签选择器
-2. 类选择器 class
-3. id 选择器
+1. 标签选择器：选择一类标签    `标签{}`
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>1.标签选择器</title>
+   
+       <style>
+           /* 标签选择器，会选择到页面上所有的这个标签的元素 */
+           /* 选择这个标签，只需要这个标签的名字 */
+           h1{
+               color: #4c87c7;
+               background: #e5bce8;
+               border-radius: 24px;
+           }
+           p{
+               font-size: 80px;
+           }
+       </style>
+   
+   </head>
+   <body>
+   
+   <!---->
+   <h1>ajuicefans</h1>
+   <h1>ajuicefans</h1>
+   <p>legends never die</p>
+   
+   </body>
+   </html>
+   ```
+
+2. 类选择器 class：选择所有class属性一致的标签，可以跨标签  `.类名{}`
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>2.类选择器</title>
+   
+       <style>
+         /* 类选择器的格式： .class的名称{}
+             好处：可以多个标签归类，是同一个class；可复用
+         */
+         .ajuicefans{
+           color: #e5bce8;
+         }
+   
+         .hahaha{
+           color: beige;
+         }
+       </style>
+   
+   </head>
+   <body>
+   
+   <h1 class="ajuicefans">标题1</h1>
+   <h1 class="hahaha">标题2</h1>
+   <h1 class="ajuicefans">标题3</h1>
+   
+   <p class="ajuicefans">你看看</p>
+   
+   </body>
+   </html>
+   ```
+
+3. id 选择器：全局唯一！  `#id名{}`
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <title>3.id 选择器</title>
+   
+     <style>
+       /* id选择器
+           格式：#id名称{}
+           id 必须保证全局唯一！
+        */
+       #ha{
+         color: red;
+       }
+   
+       .style1{
+         color: aquamarine;
+       }
+   
+       h1{
+         color: #4c87c7;
+       }
+     </style>
+   
+   </head>
+   <body>
+   <!--优先级：不遵循就近原则：固定的
+       id选择器 ＞ 类（class）选择器 ＞ 标签选择器-->
+   <h1 id="ha">标题1</h1>
+   <h1 class="style1">标题2</h1>
+   <h1 class="style1">标题3</h1>
+   <h1>标题4</h1>
+   <h1>标题5</h1>
+   <h1>标题6</h1>
+   
+   </body>
+   </html>
+   ```
+
+> 优先级：不遵循就近原则：固定的👉id选择器 ＞ 类（class）选择器 ＞ 标签选择器
+
+---
+
+
+
+## 2.2 层次选择器
+
+层次选择器不改变本身样式
+
+- body
+  - p1
+  - p2
+  - p3
+  - ul
+    - li
+      - p4
+    - li
+      - p5
+    - li
+      - p6
+
+---
+
+1. 后代选择器：在某个元素的后面   祖爷爷-爷爷-爸爸-你
+
+   ```css
+   /* 后代选择器 这里是body之后的p标签（p标签中的也一起变）全变 */
+   body p{
+   	background: red;
+   }
+   ```
+
+2. 子选择器：一代 儿子
+
+   ```css
+   body>p{
+       /* 只有body下的第一代的所有元素变 p标签中的不变 */
+       background: red;
+   }
+   ```
+
+3. 相邻兄弟选择器：同辈
+
+   ```css
+   /* 相邻兄弟选择器 对下不对上 只有一个 即下一个兄弟元素会变 */
+   .active + p{
+       background: #4c87c7;
+   }
+   ```
+
+4. 通用选择器
+
+   ```css
+   /* 通用选择器 当前选中元素的向下的所有兄弟元素 对下不对上*/
+   .active~p{
+       background: green;
+   }
+   ```
+
+> 定位一个元素，可以修改后续的元素
+
+
+
+## 2.3 结构伪类选择器
