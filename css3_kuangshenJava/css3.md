@@ -4,9 +4,13 @@ HTML5 + CSS3 + JavaScript
 
 ---
 
+视频地址：[CSS3](https://www.bilibili.com/video/BV1YJ411a7dy/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=f111e229e8ddffc692d57d989194e313)
+
+---
 
 
-# 什么是CSS？
+
+# 1.什么是CSS？
 
 如何学习？
 
@@ -55,7 +59,7 @@ CSS3.0：圆角边框，阴影，动画...	浏览器兼容性~
 
 **练习格式：**
 
-![image-20230322232309539](F:/lifeProject/Mylearning/css3_kuangshenJava/images/1.png)
+![1](https://raw.githubusercontent.com/ajuicefans/mylearning/main/css3_kuangshenJava/images/1.png)
 
 ----
 
@@ -63,13 +67,17 @@ CSS3.0：圆角边框，阴影，动画...	浏览器兼容性~
 
 ## 1.3 CSS快速入门
 
+内部样式表
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>1.我的第一个css程序</title>
-<!--    规范,<style> 可以编写css的代码 每一个声明最好使用分号 ; 结尾
+<!--    内部样式表
+		
+		规范,<style> 可以编写css的代码 每一个声明最好使用分号 ; 结尾
         语法：
             选择器{
                 声明1;
@@ -91,9 +99,9 @@ CSS3.0：圆角边框，阴影，动画...	浏览器兼容性~
 </html>
 ```
 
-建议使用这种规范
+建议使用这种规范：外部样式表
 
-![image-20230323000734360](F:/lifeProject/Mylearning/css3_kuangshenJava/images/2.png)
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/css3_kuangshenJava/images/2.png" alt="2" style="zoom:50%;" />
 
 
 
@@ -104,3 +112,78 @@ css的优势：
 3. 样式十分丰富
 4. 建议使用独立于html的css文件
 5. 利用SEO，容易被搜索引擎收录！（vue不容易被收录）
+
+
+
+## 1.4 CSS的3种导入方式
+
+- 行内样式
+- 内部样式
+- 外部样式
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2.导入方式</title>
+    
+<!--内部样式-->
+    <style>
+        h1{
+            color: green;  
+        }
+    </style>
+    
+<!--外部样式-->    
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+<!--优先级：就近原则：谁离这个元素最近，优先级就越高-->
+
+<!--行内样式：在标签元素中，编写一个style属性，编写样式即可
+    不符合 结构 与 表现 分离
+    -->
+<h1 style="color:red">ajuicefans</h1>
+
+</body>
+</html>
+```
+
+> 拓展：外部样式两种写法
+
+- 链接式：
+
+  html
+
+  ```html
+  <!--外部样式-->    
+      <link rel="stylesheet" href="css/style.css">
+  ```
+
+- 导入式（先出现架子，再一下子变得好看）
+
+  @import 是 css2.1 特有的！
+
+  ```html
+  <!--导入式 外部样式 CSS2.0-->
+      <style>
+          @import url("css/style.css");
+      </style>
+  ```
+
+
+
+# 2.选择器
+
+作用：选择页面上的某一个或某一类元素
+
+
+
+## 2.1 基本选择器
+
+1. 标签选择器
+2. 类选择器 class
+3. id 选择器
