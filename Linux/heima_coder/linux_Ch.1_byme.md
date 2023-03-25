@@ -114,7 +114,7 @@ PC端
 
 ### Linux的诞生
 
-<img src="images/4.png" alt="4" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/4.png" alt="4" style="zoom:67%;" />
 
 
 
@@ -122,19 +122,19 @@ PC端
 
 内核不是给我们“普通人”使用的~
 
-<img src="images/5.png" alt="5" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/5.png" alt="5" style="zoom:67%;" />
 
 ---
 
 ### 下载内核源码
 
-<img src="images/6.png" alt="6" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/6.png" alt="6" style="zoom:67%;" />
 
 ### Linux发行版
 
-<img src="images/7.png" alt="7" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/7.png" alt="7" style="zoom:67%;" />
 
-<img src="images/8.png" alt="8" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/8.png" alt="8" style="zoom:67%;" />
 
 ### 总结：
 
@@ -170,7 +170,7 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 
 借助**==虚拟化技术==**，我们可以在系统中，**==通过软件：模拟计算机硬件，并给虚拟硬件安装真实的操作系统==**。这样，就可以在电脑中，虚拟出一个完整的电脑，以供我们学习Linux系统
 
-<img src="F:\lifeProject\Mylearning\Linux\heima_coder\images\9.png" alt="9" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/9.png" alt="9" style="zoom:50%;" />
 
 
 
