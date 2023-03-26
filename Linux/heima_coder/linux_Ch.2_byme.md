@@ -6,7 +6,7 @@
 
 ### Linux目录结构
 
-![10](F:\lifeProject\Mylearning\Linux\heima_coder\images\10.png)
+![10](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/10.png)
 
 
 
@@ -15,7 +15,7 @@
 - Linux：/
 - Windows：\
 
-![11](F:\lifeProject\Mylearning\Linux\heima_coder\images\11.png)
+![11](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/11.png)
 
 
 
@@ -56,6 +56,68 @@
 
 ## 02 Linux命令基础
 
+### 什么是命令、命令行？
+
+命令行效率远远大于图形化界面
+
+学习Linux本质上就是学习在命令行中熟练使用Linux的各类命令
+
+![12](F:\lifeProject\Mylearning\Linux\heima_coder\images\12.png)
+
+
+
+### Linux命令基础格式
+
+![13](F:\lifeProject\Mylearning\Linux\heima_coder\images\13.png)
+
+示例：
+
+- `ls -l /home/ajuicefans`：`ls` 是命令本身，`-l` 是选项，`/home/ajuicefans` 是参数
+  - 意思是：以**列表的形式**，显示`/home/ajuicefans` 目录内的内容
+- `cp -r test1 test2`：`cp` 是命令本身，`-r` 是选项，`test1` 和 `test2` 是参数
+  - 意识是：复制文件夹 `test1`，成为 `test2`
+
+
+
+### 总结：
+
+1. 什么是命令、命令行？
+
+   - 命令：即Linux操作指令，是系统内置的程序，可以**以字符化的形式发出指令，操作OS**
+   - 命令行：即Linux终端，可以提供字符化的操作页面供命令执行（**提供字符化的命令反馈**）
+
+2. 掌握Linux命令的基础格式
+
+   `command [-options] [parameter]`
+
+   - 命令本体，即命令本身
+   - 可选选项，控制命令的行为细节
+   - 可选参数，控制命令的指向目标
+
+---
+
+
+
 
 
 ## 03 ls 命令入门
+
+### ls 命令
+
+ls 命令的作用是**列出目录下的内容**，语法细节如下：
+
+**语法**：`ls [-l -h -a] [参数：Linux路径]`
+
+- `[-l -h -a]` 是**==可选==**的选项
+  - -l，以列表形式查看
+  - -h，配合-l，以更加人性化的方式显示文件大小
+  - -a，显示隐藏文件
+- 参数：被查看的文件夹，不提供参数，表示查看当前工作目录
+  - Linxu路径是此命令**==可选==**的参数
+
+
+
+### 总结：
+
+1. 对照图像化界面，快速体验第一个命令 `ls`
+2. 理解什么是 `HOME` 目录、当前工作目录
