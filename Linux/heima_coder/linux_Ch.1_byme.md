@@ -189,3 +189,68 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 
 
 ## 04 安装VMware Workstation虚拟化软件
+
+### 虚拟化软件
+
+通过虚拟化技术，可以虚拟出计算机的硬件，那么如何虚拟呢？
+
+我们可以通过提供虚拟化的软件来获得虚拟机。
+
+![10](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/14.png)
+
+
+
+### VMware Workstation
+
+课程选用VMware WorkStation软件来提供虚拟机。
+
+下载地址： https://www.vmware.com/cn/products/workstation-pro.html
+
+
+
+### VMware Workstation安装流程
+
+详细视频：https://www.bilibili.com/video/BV1n84y1i7td?p=5&vd_source=f111e229e8ddffc692d57d989194e313
+
+---
+
+
+
+### 检查虚拟网卡有没有安装成功 / 验证网络适配器是否正常
+
+![15](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/15.png)
+
+确保 **vmnet1** 和 **vmnet8** 存在：如果不存在说明安装出问题了，卸载软件，重启电脑，重新安装
+
+![16](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/16.png)
+
+---
+
+也可以直接 `win + R` ，然后输入 `ncpa.cpl` 即可打开网络适配器选项 / 网络连接
+
+---
+
+
+
+## 05 VMware Workstation中安装CentOS7 Linux操作系统
+
+
+
+## 06 MacOS安装VMware Fusion并安装虚拟机
+
+视频地址：https://www.bilibili.com/video/BV1n84y1i7td?p=7&vd_source=f111e229e8ddffc692d57d989194e313
+
+---
+
+
+
+## 07 远程连接Linux系统
+
+
+
+## 08 扩展-Win10配置WSL（ubantu）环境
+
+
+
+## 09 扩展-虚拟机快照
+
