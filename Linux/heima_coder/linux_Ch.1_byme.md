@@ -234,6 +234,22 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 
 ## 05 VMware Workstation中安装CentOS7 Linux操作系统
 
+### 下载CentOS操作系统
+
+CentOS7.6
+
+- https://vault.centos.org/7.6.1810/isos/x86_64/   (最后的/不要漏掉）
+
+  ![17](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/17)
+
+- 或者直接使用如下链接下载：https://vault.centos.org/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso
+
+### 在VMware中安装CentOS操作系统
+
+视频地址：https://www.bilibili.com/video/BV1n84y1i7td?p=6&vd_source=f111e229e8ddffc692d57d989194e313
+
+---
+
 
 
 ## 06 MacOS安装VMware Fusion并安装虚拟机
@@ -245,6 +261,8 @@ NoNo。这不现实，因为Linux系统并不适合日常办公使用。
 
 
 ## 07 远程连接Linux系统
+
+
 
 
 
