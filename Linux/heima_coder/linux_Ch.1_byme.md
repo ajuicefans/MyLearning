@@ -240,7 +240,7 @@ CentOS7.6
 
 - https://vault.centos.org/7.6.1810/isos/x86_64/   (最后的/不要漏掉）
 
-  ![17](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/17)
+  ![17](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/17.png)
 
 - 或者直接使用如下链接下载：https://vault.centos.org/7.6.1810/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso
 
@@ -355,9 +355,39 @@ Mac: http://www.hostbuf.com/downloads/finalshell_install.pkg
 
 ## 08 扩展-Win10配置WSL（ubantu）环境
 
-
+视频地址：https://www.bilibili.com/video/BV1n84y1i7td?p=9&vd_source=f111e229e8ddffc692d57d989194e313
 
 
 
 ## 09 扩展-虚拟机快照
+
+### 虚拟机快照
+
+在学习阶段我们无法避免的可能损坏Linux操作系统。
+
+如果损坏的话，重新安装一个Linux操作系统就会十分麻烦。
+
+VMware虚拟机（Workstation和Funsion）支持为虚拟机制作快照。
+
+通过快照**将当前虚拟机的状态保存下来，在以后可以通过快照恢复虚拟机到保存的状态。**
+
+![18](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/18.png)
+
+
+
+### 在VMware Workstation Pro中制作并还原快照
+
+![19](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/19.png)
+
+具体操作见视频：https://www.bilibili.com/video/BV1n84y1i7td?p=10&vd_source=f111e229e8ddffc692d57d989194e313
+
+
+
+### 总结
+
+1. 快照有什么作用？
+
+   快照可以保存虚拟机的状态， **当虚拟机出现问题的时候， 可以通过预先制作的快照恢复到制作时候的状态， 用作备份用**。
+
+2. VMware Workstation 和 VMware Fusion 都支持制作快照去使用
 
