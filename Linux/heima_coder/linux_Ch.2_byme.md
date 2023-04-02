@@ -516,11 +516,49 @@ cat同样没有选项，只有必填参数，参数表示：被查看的文件�
 
 ## 10 which、find 命令（查找相关的命令）
 
-### which 命令：
+### which 命令：查找 命令 的程序文件
+
+我们可以通过which命令，查看所使用的一系列命令的程序文件存放在哪里
+
+语法：`which 要查找的命令`
 
 
 
 ### find 命令：按文件名查找文件
+
+语法：`find 起始路径 -name "被查找的文件名"`
+
+> 为了确保后续演示，拥有最大的权限，可以在整个系统完成搜索。我们可以切换到root用户以获得管理员权限
+
+
+
+#### 通配符
+
+被查找文件名，支持使用通配符 `*` 来做模糊查询。
+
+- 符号 `*` 表示通配符，即匹配任意内容（包含空），示例：
+
+- `test*`，表示匹配任何以test开头的内容
+- `*test`，表示匹配任何以test结尾的内容
+- `*test*`，表示匹配任何包含test的内容
+
+基于通配符的含义，可以结合find命令做文件的模糊查询。
+
+
+
+### find 命令：按文件大小查找文件
+
+语法：`find 起始路径 -size +|-n[kMG]`
+
+- +、- 表示**大于和小于**
+- n表示**大小数字**
+- kMG表示大小单位，k (小写字母) 表示kb，M表示MB，G表示GB
+
+示例：
+
+- 查找小于10KB的文件： `find / -size -10k`
+- 查找大于100MB的文件：`find / -size +100M`
+- 查找大于1GB的文件：`find / -size +1G`
 
 
 
@@ -528,27 +566,77 @@ cat同样没有选项，只有必填参数，参数表示：被查看的文件�
 
 1. which命令
    - 查找命令的程序文件
-   - 语法：
+   - 语法：`which 要查找的命令`
    - 无需选项，只需要参数表示查找哪个命令
 2. find命令
    - 用于查找指定的文件
-   - 按文件名查找：
+   - 按文件名查找：`find 起始路径 -name "被查找的文件名"`
      - 支持通配符
-   - 按文件大小查找：
+   - 按文件大小查找：`find 起始路径 -size +|-n[kMG]`
 
 
 
 ## 11 grep、wc、管道符
 
-### grep 命令
+### grep 命令：通过关键字过滤文件行
+
+可以通过grep命令，从文件中通过关键字过滤文件行。
+
+语法：`grep [-n] 关键字 文件路径`
+
+- 选项-n，可选，表示在结果中**显示匹配的行的行号**。
+- 参数，关键字，必填，表示过滤的关键字，带有空格或其它特殊符号，建议使用双引号 `""` 将关键字包围起来
+- 参数，文件路径，必填，表示要过滤内容的文件路径，可作为内容输入端口
+
+例如：`grep -n "ajuicefans" test.txt`
 
 
 
 ### wc 命令：做数量统计
 
+可以通过wc命令统计文件的行数、单词数量等
+
+语法：`wc [-c -m -l -w] 文件路径`
+
+- 选项，-c，统计bytes数量
+- 选项，-m，统计字符数量
+- 选项，-l，统计行数
+- 选项，-w，统计单词数量
+- 参数，文件路径，被统计的文件，**可作为内容输入端口**
+
+例如：
+
+- 不带选项，统计文件
+
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/21.png" alt="21" style="zoom: 67%;" />
+
+- 统计字节数：-c
+- 统计字符数：-m
+- 统计行数：-l
+- 统计单词数：-w
 
 
-### 管道符
+
+### 管道符 `|`
+
+将管道符左边命令的**结果**，作为右边命令的**输入**（只要能产生内容输出的命令都能放在左边）
+
+![22](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/22.png)
+
+如上图：
+
+- `cat itheima.txt`的输出结果（文件内容）
+- 作为右边grep命令的输入（被过滤文件）
+
+
+
+#### 管道符的应用非常多
+
+- `ls | grep Desktop`，过滤ls的结果
+- `find / -name "test" | grep "/usr/lib64"`，过滤结果，只找路径带有/usr/lib64的结果
+- `cat itheima.txt | grep itcast | grep itheima`，可以嵌套使用哦
+  - `cat itheima.txt`的结果给 `grep itcast` 使用
+  - `cat itheima.txt | grep itcast` 的结果给 `grep itheima`使用
 
 
 
@@ -556,13 +644,13 @@ cat同样没有选项，只有必填参数，参数表示：被查看的文件�
 
 1. grep命令
    - 从文件中通过关键字过滤文件行
-   - 语法：
+   - 语法：`grep [-n] 关键字 文件路径`
    - 选项-n，可选，表示在结果中显示匹配的行的行号。
    - 参数，关键字，必填，表示过滤的关键字，建议使用””将关键字包围起来
    - 参数，文件路径，必填，表示要过滤内容的文件路径，可作为管道符的输入
 2. wc命令
    - 命令统计文件的行数、单词数量、字节数、字符数等
-   - 语法：
+   - 语法：`wc [-c -m -l -w] 文件路径`
    - 不带选项默认统计：行数、单词数、字节数
    - -c字节数、-m字符数、-l行数、-w单词数
    - 参数，被统计的文件路径，可作为管道符的输入
@@ -571,23 +659,70 @@ cat同样没有选项，只有必填参数，参数表示：被查看的文件�
 
 
 
+### 练习
+
+对创建的test.txt进行统计
+
+请使用cat、grep、管道符、wc命令组合，进行统计：
+
+- 统计文件中带有itcast关键字的有几行
+
+  `cat test.txt | grep itcast | wc -l`
+
+- 统计文件中带有itheima关键字的结果中有多少个单词
+
+  `cat test.txt | grep itheima | wc -w`
+
+---
+
 
 
 ## 12 echo、tail、重定向符
 
-### echo命令
+### echo命令：输出指定内容
+
+可以使用echo命令在命令行内输出指定内容
+
+语法：`echo 要输出的内容`
+
+- 无需选项，只有一个参数，表示要输出的内容，**复杂内容可以用`""`包围**
 
 
 
 ### 反引号`
 
+![23](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/23.png)
+
+我们可以通过将命令用反引号（通常也称之为飘号）`` `将其包围
+
+被`包围的内容，会被作为命令执行，而非普通字符
+
+![24](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/24.png)
 
 
-### 重定向符
+
+### 重定向符：将左边的结果写入右边的文件
+
+我们再来学习两个特殊符号，重定向符：>和>>
+
+- `>`，将左侧命令的结果，**覆盖**写入到符号右侧指定的文件中
+- `>>`，将左侧命令的结果，**追加**写入到符号右侧指定的文件中
 
 
 
-### tail 命令
+### tail 命令：查看文件尾部内容，并追踪文件的最新更改
+
+使用tail命令，可以查看文件尾部内容，跟踪文件的最新更改
+
+语法：`tail [-f -num] Linux路径`
+
+- 参数，Linux路径，表示被跟踪的文件路径
+
+- 选项，-f（follow），表示“持续跟踪”：发生变化也会同步变化
+
+- 选项, -num，表示，查看尾部多少行，不填默认10行
+
+  `tail -5 test.txt`
 
 
 
@@ -595,7 +730,7 @@ cat同样没有选项，只有必填参数，参数表示：被查看的文件�
 
 1. echo命令
    - 可以使用echo命令在命令行内输出指定内容
-   - 语法：
+   - 语法：`echo 要输出的内容`
    - 无需选项，只有一个参数，表示要输出的内容，复杂内容可以用””包围
 2. 反引号符
    - 被`包围的内容，会被作为命令执行，而非普通字符
@@ -604,11 +739,31 @@ cat同样没有选项，只有必填参数，参数表示：被查看的文件�
    - `>>`，将左侧命令的结果，追加写入到符号右侧指定的文件中
 4. tail命令
    - 查看文件尾部内容，并可以持续跟踪
-   - 语法：
+   - 语法：`tail [-f -num] Linux路径`
    - -f：持续跟踪，-num：启动的时候查看尾部多少行，默认10
    - Linux路径，表示被查看的文件
 
 
+
+### 练习：
+
+请使用echo并配合反引号，输出内容：我当前的工作目录是：`具体的工作目录路径`
+
+并结合重定向符，将输出结果覆盖写入work.txt文件
+
+```
+echo "我当前的工作目录是：`pwd`" > work.txt
+```
+
+请使用echo输出任意内容并追加到work.txt文件中
+
+通过tail命令持续跟踪文件内容更改
+
+```
+echo "内容" >> work.txttail -f work.txt
+```
+
+---
 
 
 
@@ -642,7 +797,7 @@ vi\vim是visual interface的简称, 是Linux中最经典的文本编辑器
 
 ​	以：开始，通常用于文件的保存、退出。
 
-![20](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/20.png)
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/20.png" alt="20" style="zoom:67%;" />
 
 
 
@@ -654,3 +809,72 @@ vi\vim是visual interface的简称, 是Linux中最经典的文本编辑器
 
 - 如果文件路径表示的文件**不存在，那么此命令会用于创建并编辑新文件**
 - 如果文件路径表示的文件存在，那么此命令用于编辑已有文件
+
+
+
+#### 命令模式快捷键：
+
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/25.png" alt="25" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/26.png" alt="26" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/27.png" alt="27" style="zoom:67%;" />
+
+
+
+#### 底线命令模式：
+
+在命令模式内，输入`: `，即可进入底线命令模式，支持如下命令：
+
+![28](https://raw.githubusercontent.com/ajuicefans/mylearning/main/Linux/heima_coder/images/28.png)
+
+
+
+### 总结：
+
+1. 什么是vi/vim编辑器？
+
+   - vi\vim编辑器，就是命令行模式下的文本编辑器，用来编辑文件vim是vi的升级版，一般用vim即可，包含全部vi功能
+
+2. 基础命令
+
+   - ```
+     vi 文件路径
+     vim 文件路径
+     ```
+
+3. 运行模式
+   - 命令模式，默认的模式，可以通过键盘快捷键控制文件内容
+   - 输入模式，通过命令模式进入，可以输入内容进行编辑，按esc退回命令模式
+   - 底线命令模式，通过命令模式进入，可以对文件进行保存、关闭等操作
+
+
+
+## 补充：关于命令选项的说明
+
+### 查看命令帮助和手册
+
+#### `--help`
+
+任何命令都支持：`--help` 选项， 可以通过这个选项，查看命令的帮助。
+
+如：`ls --help`， 会列出ls命令的帮助文档
+
+
+
+#### `man`
+
+如果想要查看命令的详细手册，可以通过man（manual， 手册）命令查看
+
+比如：`man ls`，就是查看ls命令的详细手册；`man cd`，就是查看cd命令的详细手册
+
+>  大多数手册都是全英文的，如果阅读吃力，可以通过重定向符：`man ls > ls-man.txt`，输出手册到文件然后通过翻译软件翻译内容查看哦
+
+
+
+### 总结
+
+1. 命令的选项非常多， 课程中仅仅讲解常见的， 满足绝大多数使用场景
+2. 如需详细的命令说明， 可以：
+   - 查看命令帮助， 通过 `--help` 选项
+   - 查看命令手册， 通过 `man` 命令
